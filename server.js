@@ -15,6 +15,22 @@ var users = require('./routes/users');
 
 var app = express();
 
+//telling mongoose to connect my localhost to unit_2_project
+mongoose.connect('mongodb://localhost/unit_2_project');
+
+//Save the connection to the database in a variable
+var db = mongoose.connection;
+
+//log an error if the DB cannot connect
+db.on('error', function(err){
+  console.log(err);
+});
+
+//tells me database has correctly connected
+db.once('open', function(err){
+  console.log(err);
+});
+
 app.set("view engine", "hbs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
