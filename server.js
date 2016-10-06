@@ -16,7 +16,7 @@ var users = require('./routes/users');
 var app = express();
 
 //telling mongoose to connect my localhost to unit_2_project
-mongoose.connect('mongodb://localhost/unit_2_project');
+mongoose.connect('mongodb://localhost/unit-2-project');
 
 //Save the connection to the database in a variable
 var db = mongoose.connection;
