@@ -33,4 +33,8 @@
     "url": "https://github.com/RichieGTurner/Unit_2_project/issues"
   },
   "homepage": "https://github.com/RichieGTurner/Unit_2_project#readme"
+},
+  "engines": {
+    "node": "6.4.0"
+  }
 }
