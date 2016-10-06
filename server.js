@@ -16,7 +16,11 @@ var users = require('./routes/users');
 var app = express();
 
 //telling mongoose to connect my localhost to unit_2_project
-mongoose.connect('mongodb://localhost/unit-2-project');
+// mongoose.connect('mongodb://localhost/unit-2-project');
+
+var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/unit-2-project';
+
+mongoose.connect(mongoURI);
 
 //Save the connection to the database in a variable
 var db = mongoose.connection;
@@ -42,6 +46,6 @@ app.get('/', function(req,res){
 })
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("listening on port 3000 yo");
 });
