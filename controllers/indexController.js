@@ -8,12 +8,12 @@ var Schema = require("../db/account.js");
 var User = Schema.User
 
 //login link
-router.get('/login', function(req, res) {
+router.get('/new', function(req, res) {
   console.log(req.session)
   res.render('index/new');
 });
 
-router.post('/login', passport.authenticate('local'), function(req, res) {
+router.post('/new', passport.authenticate('local'), function(req, res) {
   req.session.save(function (err) {
     if (err) {
       return next(err);
