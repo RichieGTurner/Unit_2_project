@@ -3,7 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy
 
-var Schema = require("../db/account.js");
+var Schema = require("../models/account.js");
 // var Admin = Schema.Admin
 var User = Schema.User
 

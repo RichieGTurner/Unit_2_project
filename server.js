@@ -10,8 +10,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var methodOverride  = require('method-override');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+
 
 var app = express();
 
