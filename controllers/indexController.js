@@ -10,7 +10,7 @@ var User = Schema.User
 //login link
 router.get('/login', function(req, res) {
   console.log(req.session)
-  res.render('users/login');
+  res.render('index/new');
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
@@ -18,7 +18,7 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
     if (err) {
       return next(err);
     }
-    res.redirect('/users');
+    res.redirect('/index');
   });
 });
 
