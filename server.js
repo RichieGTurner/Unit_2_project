@@ -41,6 +41,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname +'/public'));
 
+//basic root route
 app.get('/', function(req,res){
   res.send("<h1>One Piece Synopsis</h1>");
 })
