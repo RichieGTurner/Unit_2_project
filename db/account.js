@@ -3,11 +3,10 @@ var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
 mongoose.Promise = global.Promise;
 
-var AdminSchema = new Schema({
-    username: String,
-    password: String,
-    admin = true
-})
+// var AdminSchema = new Schema({
+//     username: String,
+//     password: String
+// })
 
 
 var UserSchema = new Schema({
@@ -15,12 +14,12 @@ var UserSchema = new Schema({
     password: String
 });
 
-Account.plugin(passportLocalMongoose);
+// Account.plugin(passportLocalMongoose);
 
-var AdminModel = mongoose.model("Admin", AdminSchema);
+// var AdminModel = mongoose.model("Admin", AdminSchema);
 var UserModel = mongoose.model("User", UserSchema);
 
 module.exports = {
   User: UserModel
-  Admin: AdminModel
+  // Admin: AdminModel
 }

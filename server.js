@@ -18,6 +18,9 @@ var app = express();
 //telling mongoose to connect my localhost to unit_2_project
 // mongoose.connect('mongodb://localhost/unit-2-project');
 
+//controller file
+var usersController = require('./controllers/indexController.js')
+
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/unit-2-project';
 
 mongoose.connect(mongoURI);
